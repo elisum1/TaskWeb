@@ -26,7 +26,7 @@ const Profile = () => {
           return;
         }
 
-        const response = await fetch('http://localhost:3001/api/auth/profile', {
+        const response = await fetch('https://taskapi-7z2t.onrender.com/api/auth/profile', {
           method: 'GET',
           headers: {
             Authorization: `Bearer ${token}`,
@@ -99,7 +99,7 @@ const Profile = () => {
         formDataToSend.append('profilePhoto', profilePhoto);
       }
 
-      const response = await fetch('http://localhost:3001/api/auth/update', {
+      const response = await fetch('https://taskapi-7z2t.onrender.com/api/auth/update', {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`,

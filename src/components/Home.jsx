@@ -21,7 +21,7 @@ const Home = () => {
       const token = localStorage.getItem('token');
       if (!token) throw new Error('Token not found. Please log in again.');
 
-      const response = await fetch('http://localhost:3001/api/auth/getTasks', {
+      const response = await fetch('https://taskapi-7z2t.onrender.com/api/auth/getTasks', {
         method: 'GET',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -65,7 +65,7 @@ const Home = () => {
         const token = localStorage.getItem('token');
         if (!token) throw new Error('Token not found. Please log in again.');
 
-        const response = await fetch('http://localhost:3001/api/auth/tasks', {
+        const response = await fetch('https://taskapi-7z2t.onrender.com/api/auth/tasks', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ const Home = () => {
         const token = localStorage.getItem('token');
         if (!token) throw new Error('Token not found. Please log in again.');
 
-        const response = await fetch(`http://localhost:3001/api/auth/tasks/${editTask.id}`, {
+        const response = await fetch(`https://taskapi-7z2t.onrender.com/api/auth/tasks/${editTask.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ const Home = () => {
       const token = localStorage.getItem('token');
       if (!token) throw new Error('Token not found. Please log in again.');
 
-      const response = await fetch(`http://localhost:3001/api/auth/tasks/${taskId}`, {
+      const response = await fetch(`https://taskapi-7z2t.onrender.com/api/auth/tasks/${taskId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -173,7 +173,7 @@ const Home = () => {
       const token = localStorage.getItem('token');
       if (!token) throw new Error('Token not found. Please log in again.');
 
-      const response = await fetch(`http://localhost:3001/api/auth/tasks/${taskId}`, {
+      const response = await fetch(`https://taskapi-7z2t.onrender.com/api/auth/tasks/${taskId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

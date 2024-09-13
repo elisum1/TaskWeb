@@ -42,7 +42,7 @@ const LoginPage = () => {
     setIsLoggingIn(true);
 
     try {
-      const response = await fetch('http://localhost:3001/api/auth/login', {
+      const response = await fetch('https://taskapi-7z2t.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const LoginPage = () => {
 
   const handleResetPassword = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/auth/request-reset', {
+      const response = await fetch('https://taskapi-7z2t.onrender.com/api/auth/request-reset', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
