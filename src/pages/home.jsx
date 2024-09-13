@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import {FaUser, FaListAlt, FaTrello, FaCog, FaQuestionCircle } from 'react-icons/fa';
+import { FaUser, FaListAlt, FaTrello, FaCog, FaQuestionCircle } from 'react-icons/fa';
 import { MdOutlineExpandMore } from 'react-icons/md';
 import Home from '../components/Home';
 import MyTasks from '../components/MyTasks';
@@ -57,8 +57,8 @@ const TaskManagementPage = () => {
     >
       {/* Sidebar Navigation */}
       <aside
-        className={`bg-gray-100 text-gray-800 flex flex-col justify-between lg:h-full p-2 transition-width duration-300 ${
-          sidebarExpanded ? 'w-64' : 'w-16'
+        className={`bg-gray-100 text-gray-800 flex flex-col justify-between lg:h-full p-2 transition-all duration-300 ${
+          sidebarExpanded ? 'lg:w-64 w-full' : 'lg:w-16 w-full'
         }`}
         onMouseEnter={() => setSidebarExpanded(true)}
         onMouseLeave={() => setSidebarExpanded(false)}
@@ -69,8 +69,10 @@ const TaskManagementPage = () => {
               <li>
                 <button
                   onClick={() => setActiveComponent('home')}
-                  className={`flex items-center space-x-3 p-2 rounded-lg transition-colors duration-200 hover:bg-gray-200 w-full text-left ${
+                  className={`flex items-center space-x-3 p-2 rounded-lg transition-colors duration-200 w-full text-left ${
                     activeComponent === 'home' && 'bg-[#fcf8c1]'
+                  } ${
+                    sidebarExpanded ? 'hover:bg-gray-200' : ''
                   }`}
                 >
                   <FaTrello />
@@ -80,8 +82,10 @@ const TaskManagementPage = () => {
               <li>
                 <button
                   onClick={() => setActiveComponent('tasks')}
-                  className={`flex items-center space-x-3 p-2 rounded-lg transition-colors duration-200 hover:bg-gray-200 w-full text-left ${
+                  className={`flex items-center space-x-3 p-2 rounded-lg transition-colors duration-200 w-full text-left ${
                     activeComponent === 'tasks' && 'bg-[#fcf8c1]'
+                  } ${
+                    sidebarExpanded ? 'hover:bg-gray-200' : ''
                   }`}
                 >
                   <FaListAlt />
@@ -91,8 +95,10 @@ const TaskManagementPage = () => {
               <li>
                 <button
                   onClick={() => setActiveComponent('profile')}
-                  className={`flex items-center space-x-3 p-2 rounded-lg transition-colors duration-200 hover:bg-gray-200 w-full text-left ${
+                  className={`flex items-center space-x-3 p-2 rounded-lg transition-colors duration-200 w-full text-left ${
                     activeComponent === 'profile' && 'bg-[#fcf8c1]'
+                  } ${
+                    sidebarExpanded ? 'hover:bg-gray-200' : ''
                   }`}
                 >
                   <FaUser className="text-black" />

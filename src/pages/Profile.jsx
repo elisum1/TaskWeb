@@ -132,7 +132,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="profile-container p-6 mx-auto bg-white shadow-lg rounded-lg border border-gray-300 flex animate-slide-in">
+    <div className="profile-container  p-6 mx-auto bg-gray-800 shadow-lg rounded-lg border border-gray-300 flex animate-slide-in text-white">
       {/* Sección de la Foto de Perfil */}
       <div className="profile-photo">
         <img
@@ -154,10 +154,10 @@ const Profile = () => {
 
       {/* Sección de Información del Usuario */}
       <div className="profile-info p-6 flex flex-col gap-4">
-        <h2 className="text-2xl font-medium text-gray-800">Perfil de Usuario</h2>
+        <h2 className="text-2xl font-medium ">Perfil de Usuario</h2>
         {error && <p className="text-red-500 text-sm">{error}</p>}
         {successMessage && <p className="text-green-500 text-sm">{successMessage}</p>}
-        <label className="flex flex-col text-gray-600">
+        <label className="flex flex-col ">
           Nombre de usuario:
           <input
             type="text"
@@ -168,7 +168,7 @@ const Profile = () => {
             className="mt-1 p-2 border border-gray-300 rounded-sm text-sm"
           />
         </label>
-        <label className="flex flex-col text-gray-600">
+        <label className="flex flex-col ">
           Correo electrónico:
           <input
             type="email"
@@ -179,7 +179,7 @@ const Profile = () => {
             className="mt-1 p-2 border border-gray-300 rounded-sm text-sm"
           />
         </label>
-        <label className="flex flex-col text-gray-600">
+        <label className="flex flex-col ">
           Teléfono:
           <input
             type="text"
@@ -190,7 +190,7 @@ const Profile = () => {
             className="mt-1 p-2 border border-gray-300 rounded-sm text-sm"
           />
         </label>
-        <label className="flex flex-col text-gray-600">
+        <label className="flex flex-col ">
           Ciudad:
           <input
             type="text"
@@ -203,7 +203,7 @@ const Profile = () => {
         </label>
         {isEditing && (
           <>
-            <label className="flex flex-col text-gray-600">
+            <label className="flex flex-col ">
               Contraseña Actual:
               <div className="relative">
                 <input
@@ -216,13 +216,13 @@ const Profile = () => {
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
-                  className="absolute right-2 top-2 text-gray-600"
+                  className="absolute right-2 top-2 "
                 >
                   {showPassword ? <FaEyeSlash /> : <FaEye />}
                 </button>
               </div>
             </label>
-            <label className="flex flex-col text-gray-600">
+            <label className="flex flex-col ">
               Nueva Contraseña:
               <input
                 type="password"
